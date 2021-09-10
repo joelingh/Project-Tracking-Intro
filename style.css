@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root {
+    --Red: hsl(0, 100%, 68%);
+    --VeryDarkBlue: hsl(230, 29%, 20%);
+    --DarkGrayishBlue: hsl(230, 11%, 40%);
+    --GrayishBlue: hsl(231, 7%, 65%);
+    --LightGrayishBlue: hsl(207, 33%, 95%);
+}
+
+body {
+    /* background-color: var(--LightGrayishBlue); */
+    font-family: 'Barlow', sans-serif;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+.toggle {
+    display: none;
+}
+
+.container {}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    align-items: center;
+}
+
+.navbar-brand {
+    flex: 1;
+    padding-left: 120px;
+}
+
+.navbar img {
+    max-width: 100%;
+
+}
+
+.navbar-expand {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    list-style: none;
+
+}
+
+
+.navbar-expand .nav-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+}
+
+
+.navbar-expand .nav-item .nav-link {
+    color: var(--VeryDarkBlue);
+    text-decoration: none;
+}
+
+
+.nav-link-login{
+    color: var(--GrayishBlue);
+    text-decoration: none;
+}
+
+.navbar-expand .nav-item .nav-link:hover, .nav-link-login:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    /* text-decoration: 2px underline var(--Dark-Grayish-Blue); */
+
+}
+
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+
+
+
+}
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.left-column p:nth-of-type(1) {
+    color: var(--GrayishBlue);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.left-column p span {
+    background-color: var(--VeryDarkBlue);
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    letter-spacing: 0;
+    margin-right: 10px;
+}
+
+.left-column h1 {
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+
+}
+
+.left-column .description {
+    margin-bottom: 50px;
+    color: var(--DarkGrayishBlue);
+}
+
+
+
+.left-column button {
+    background-color: var(--Red);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline;
+}
+
+.left-column p:last-child {
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-left: 25px;
+    color: var(--GrayishBlue);
+}
+
+
+.right-column {
+    flex: 1;
+    padding: 58px 0 0 165px;
+    position: relative;
+}
+
+.right-column .graphic {
+    height: 110%;
+    width: 700px;
+    background: hsl(207, 33%, 95%);
+    border-bottom-left-radius: 30px;
+    position: absolute;
+    top: -60%;
+    left: 20%;
+    z-index: -1;
+}
+
+.right-column img {
+    width: 120%;
+    position: absolute;
+    z-index: 100;
+    left: 150px;
+}
+
+
+@media screen and (max-width: 600px){
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    .navbar-brand {
+        padding-left: 20px;
+    }
+
+
+
+    .navbar-expand {
+        display: none;
+      }
+
+      .toggle {
+        flex: 1;
+        display: flex;
+        justify-content: end;
+      }
+
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 70px;
+        padding: 0;
+    }
+
+    .right-column{
+        flex: 1;
+        height: auto;
+    }
+
+    .right-column .graphic {
+        height: 370px;
+        width: 200px;
+        left: 50%;
+        top: -80px;
+        overflow: hidden;
+    }
+
+    .right-column img {
+        max-width: 400px;
+        top: 40px;
+        left: 0px;
+        overflow: hidden;
+    }
+
+    .left-column {
+        flex: 1;
+        padding-top: 250px;
+        padding-left: 10px;
+    }
+
+    .left-column p:first-child {
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .left-column h1 {
+        font-size: 40px;
+    }
+
+    .left-column p:last-child {
+    
+        padding-left: 10px;
+        letter-spacing: 1px;
+    }
+  }
